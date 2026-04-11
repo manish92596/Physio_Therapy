@@ -1,0 +1,113 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy / Medical Premium)",
+  "typography": {
+    "headings": "DM Serif Display",
+    "body": "DM Sans",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap",
+    "weights": {
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "bold": 700
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-tight",
+      "h2": "text-3xl sm:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed"
+    }
+  },
+  "colors": {
+    "background": "#FDFBF7",
+    "foreground": "#0A1128",
+    "primary": "#0A1128",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#00AEEF",
+    "accentForeground": "#FFFFFF",
+    "muted": "#E6F8F5",
+    "mutedForeground": "#0A1128",
+    "border": "#E5E7EB",
+    "card": "#FFFFFF"
+  },
+  "spacing_and_layout": {
+    "generous_padding": "p-8 md:p-12 lg:p-16",
+    "bento_gap": "gap-6 md:gap-8",
+    "border_radius": "rounded-2xl"
+  },
+  "sections": [
+    {
+      "name": "Hero",
+      "layout": "Grid 2-col desktop. Left: Value proposition & CTAs. Right: Animated waveform graphic (built with Framer motion bars).",
+      "requirements": "Waveform must be visually engaging, moving automatically. No audio. CTA points to Calendly mock."
+    },
+    {
+      "name": "Problem_Solution",
+      "layout": "Side-by-side or stacked bento cards with scroll animation. Emphasize contrast (Problem: dull, Solution: vibrant mint/blue accents)."
+    },
+    {
+      "name": "HowItWorks",
+      "layout": "3-step visual flow. Numbered badges with soft mint green backgrounds (#E6F8F5)."
+    },
+    {
+      "name": "Features",
+      "layout": "2x3 Grid. Icons from lucide-react. Cards with solid white background and 1px subtle border."
+    },
+    {
+      "name": "Testimonials",
+      "layout": "Cards featuring dentist portraits, quote, and prominent metrics (e.g., '40 hrs saved/week')."
+    },
+    {
+      "name": "Pricing",
+      "layout": "3-tier cards, annual/monthly toggle. Center tier highlighted in Deep Navy (#0A1128) with white text."
+    },
+    {
+      "name": "Integrations",
+      "layout": "Marquee with grayscale clinic software/company logos."
+    },
+    {
+      "name": "FAQ",
+      "layout": "Accordion list in a constrained max-w-3xl container."
+    },
+    {
+      "name": "CTA",
+      "layout": "Deep navy banner (#0A1128), ivory text, dental blue button (#00AEEF) for final demo push."
+    }
+  ],
+  "components_strategy": {
+    "buttons": "Pill-shaped (rounded-full) or smooth rounded (rounded-xl) for a friendly yet professional medical vibe.",
+    "cards": "White background, very subtle shadow (shadow-sm), 1px border. Deep Navy used only for highlighting."
+  },
+  "media_urls": {
+    "hero_background": "",
+    "dentist_portraits": [
+      "https://images.unsplash.com/photo-1673865641073-4479f93a7776?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxkZW50aXN0JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1ODgyMzUwfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1674775372058-c4c8813c6611?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1ODgyMzUwfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1670191247079-f9713ae06dcf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwzfHxkZW50aXN0JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1ODgyMzUwfDA&ixlib=rb-4.1.0&q=85"
+    ],
+    "logos": [
+      "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NzU4ODIzNTB8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NzU4ODIzNTB8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1562783912-21ad31ee2a83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3xlbnwwfHx8fDE3NzU4ODIzNTB8MA&ixlib=rb-4.1.0&q=85"
+    ],
+    "clinic_interiors": [
+      "https://images.pexels.com/photos/4269276/pexels-photo-4269276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NzU4ODIzNTB8MA&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "animation_rules": {
+    "waveform": "Use framer-motion to animate multiple vertical bars in a row. Heights should ping-pong smoothly to simulate voice activity. Use dental blue (#00AEEF) and mint green (#E6F8F5).",
+    "scroll": "Staggered fade-up for section content. Not too aggressive, keep it clinical and precise."
+  },
+  "instructions_to_main_agent": [
+    "Inject the google_fonts_url into the index.html or global css.",
+    "Update tailwind.config.js to include font families: 'DM Serif Display' for serif and 'DM Sans' for sans.",
+    "Update tailwind.config.js to extend colors matching the 'colors' block in this JSON.",
+    "Build the application using React, Tailwind CSS, and Framer Motion. Ensure components are pure React/Tailwind/Framer, avoiding full shadcn imports if they override custom layouts, but use shadcn for Accordion/Tabs.",
+    "Do NOT use purple or generic SaaS gradients. Stick strictly to the defined colors: Navy (#0A1128), Ivory (#FDFBF7), Dental Blue (#00AEEF), Soft Mint (#E6F8F5).",
+    "Implement the waveform animation visually using HTML/CSS/Framer Motion, simulating a voice AI agent. Ensure it fits a modern clinical tech vibe.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Use lucide-react for icons.",
+    "For the integrations strip, use react-fast-marquee and grayscale the logos."
+  ]
+}
