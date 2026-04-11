@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { Button } from './ui/button';
-import { Shield, CheckCircle, Clock, Zap } from 'lucide-react';
+import { Shield, CheckCircle, Clock, Zap, ArrowDown } from 'lucide-react';
 
-const WaveformAnimation = ({ isActive }) => {
+const WaveformAnimation = () => {
   const bars = 24;
   
   return (
@@ -15,13 +14,13 @@ const WaveformAnimation = ({ isActive }) => {
           style={{
             background: i % 3 === 0 ? '#00AEEF' : i % 3 === 1 ? '#0A1128' : '#E6F8F5',
           }}
-          animate={isActive ? {
+          animate={{
             height: [
               `${20 + Math.random() * 30}%`,
               `${50 + Math.random() * 50}%`,
               `${20 + Math.random() * 30}%`,
             ],
-          } : { height: '20%' }}
+          }}
           transition={{
             duration: 0.6 + Math.random() * 0.4,
             repeat: Infinity,
@@ -35,7 +34,6 @@ const WaveformAnimation = ({ isActive }) => {
 };
 
 const HeroSection = () => {
-  const [isWaveformActive, setIsWaveformActive] = useState(true);
 
   const trustBadges = [
     { icon: Shield, text: 'HIPAA Compliant' },
@@ -77,11 +75,12 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-navy text-navy hover:bg-navy/5 rounded-full px-8 py-6 text-lg btn-secondary"
-                onClick={() => setIsWaveformActive(!isWaveformActive)}
-                data-testid="hero-cta-hear"
+                className="border-2 border-navy text-navy hover:bg-navy/5 rounded-full px-8 py-6 text-lg btn-secondary group"
+                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                data-testid="hero-cta-learn"
               >
-                {isWaveformActive ? 'Pause Animation' : 'Hear It in Action'}
+                See How It Works
+                <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </Button>
             </div>
 
@@ -117,7 +116,7 @@ const HeroSection = () => {
               </div>
               
               {/* Waveform */}
-              <WaveformAnimation isActive={isWaveformActive} />
+              <WaveformAnimation />
               
               {/* Call info */}
               <div className="mt-6 text-center">
