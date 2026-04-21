@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App font-sans bg-ivory text-navy min-h-screen">
+    <div className="App font-sans bg-cream text-charcoal min-h-screen">
       <Navbar />
       <main>
         <HeroSection />

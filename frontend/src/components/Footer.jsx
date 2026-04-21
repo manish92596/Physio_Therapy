@@ -29,36 +29,36 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-navy text-white py-16 px-4" data-testid="footer">
+    <footer className="bg-charcoal text-cream py-20 px-4" data-testid="footer">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-dental-blue rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              <div className="w-10 h-10 bg-gradient-to-br from-teal to-teal-light rounded-xl flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <span className="font-serif text-xl">DentaLine AI</span>
+              <span className="font-serif text-2xl">Physiocare<span className="text-terracotta">.Ai</span></span>
             </div>
-            <p className="text-white/60 mb-6 max-w-sm">
-              Your clinic's front desk, on autopilot — 24/7. AI-powered voice agents for dental practices across North America.
+            <p className="text-cream/50 mb-6 max-w-sm font-light">
+              Your clinic's front desk, on autopilot — 24/7. AI-powered voice agents for physical therapy practices across the USA.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-white/60 text-sm">
+              <div className="flex items-center gap-3 text-cream/50 text-sm">
                 <Phone className="w-4 h-4" />
-                <span>1-800-DENTALINE</span>
+                <span>1-800-PHYSIO-AI</span>
               </div>
-              <div className="flex items-center gap-3 text-white/60 text-sm">
+              <div className="flex items-center gap-3 text-cream/50 text-sm">
                 <Mail className="w-4 h-4" />
-                <span>hello@dentaline.ai</span>
+                <span>hello@physiocare.ai</span>
               </div>
-              <div className="flex items-center gap-3 text-white/60 text-sm">
+              <div className="flex items-center gap-3 text-cream/50 text-sm">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Austin, TX</span>
               </div>
             </div>
           </div>
@@ -66,13 +66,13 @@ const Footer = () => {
           {/* Links Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="font-medium text-white mb-4">{title}</h4>
+              <h4 className="font-medium text-cream mb-4">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-white/60 hover:text-white transition-colors text-sm"
+                      className="text-cream/50 hover:text-cream transition-colors text-sm font-light"
                       data-testid={`footer-link-${link.name.toLowerCase().replace(' ', '-')}`}
                     >
                       {link.name}
@@ -85,9 +85,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">
-            © 2025 DentaLine AI · Built for dental clinics across North America
+        <div className="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-cream/30 text-sm font-light">
+            © 2025 Physiocare.Ai · Built for physical therapy clinics across the USA
           </p>
           
           {/* Social Links */}
@@ -96,11 +96,11 @@ const Footer = () => {
               <a
                 key={social.name}
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-cream/20 transition-colors"
                 aria-label={social.name}
                 data-testid={`social-${social.name.toLowerCase()}`}
               >
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-cream" fill="currentColor" viewBox="0 0 24 24">
                   <path d={social.icon} />
                 </svg>
               </a>

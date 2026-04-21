@@ -18,8 +18,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        serif: ['"DM Serif Display"', 'serif'],
-        sans: ['"DM Sans"', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Manrope"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -27,10 +27,21 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        ivory: "#FDFBF7",
-        navy: "#0A1128",
-        "dental-blue": "#00AEEF",
-        "mint-green": "#E6F8F5",
+        // Physiocare.Ai color palette
+        cream: "#F7F8F6",
+        sage: "#EDF0E9",
+        charcoal: "#121C1A",
+        teal: "#2B6165",
+        "teal-light": "#45898F",
+        terracotta: "#E07A5F",
+        "terracotta-light": "#F2A694",
+        "healing-green": "#829379",
+        "healing-green-light": "#A3B19B",
+        // Legacy support
+        ivory: "#F7F8F6",
+        navy: "#121C1A",
+        "dental-blue": "#2B6165",
+        "mint-green": "#EDF0E9",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

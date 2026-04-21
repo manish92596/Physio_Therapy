@@ -13,8 +13,8 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'Is DentaLine AI HIPAA compliant?',
-      answer: 'Yes, absolutely. DentaLine AI is fully HIPAA compliant. All patient data is encrypted in transit and at rest, we maintain BAA agreements, and our infrastructure meets all healthcare security requirements. We conduct regular third-party security audits to ensure compliance.',
+      question: 'Is Physiocare.Ai HIPAA compliant?',
+      answer: 'Yes, absolutely. Physiocare.Ai is fully HIPAA compliant. All patient data is encrypted in transit and at rest, we maintain BAA agreements, and our infrastructure meets all healthcare security requirements. We conduct regular third-party security audits to ensure compliance.',
     },
     {
       question: 'How long does setup take?',
@@ -26,20 +26,20 @@ const FAQSection = () => {
     },
     {
       question: 'What happens if a patient has a complex question?',
-      answer: 'DentaLine AI is designed to handle most common questions automatically. For complex issues beyond its scope, it seamlessly transfers the call to your staff or takes a detailed message for follow-up. You define the escalation rules.',
+      answer: 'Physiocare.Ai is designed to handle most common questions automatically. For complex clinical issues beyond its scope, it seamlessly transfers the call to your staff or takes a detailed message for follow-up. You define the escalation rules.',
     },
     {
       question: 'Does it work after hours and on weekends?',
-      answer: 'Yes! That\'s one of the main benefits. DentaLine AI answers calls 24/7, including after hours, weekends, and holidays. Patients can book, reschedule, or get information anytime, even when your office is closed.',
+      answer: 'Yes! That\'s one of the main benefits. Physiocare.Ai answers calls 24/7, including after hours, weekends, and holidays. Patients can book PT sessions, reschedule, or get information anytime, even when your clinic is closed.',
     },
     {
       question: 'What languages does it support?',
-      answer: 'DentaLine AI currently supports English and Spanish, with French coming soon. Our AI can detect the caller\'s language preference and respond accordingly. Custom language support is available for Enterprise plans.',
+      answer: 'Physiocare.Ai currently supports English and Spanish, with additional languages coming soon. Our AI can detect the caller\'s language preference and respond accordingly. Custom language support is available for Enterprise plans.',
     },
   ];
 
   return (
-    <section ref={ref} id="faq" className="py-20 md:py-32 px-4 bg-white" data-testid="faq-section">
+    <section ref={ref} id="faq" className="py-24 md:py-32 px-4 bg-white" data-testid="faq-section">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -47,11 +47,12 @@ const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl text-navy mb-4">
+          <p className="text-xs uppercase tracking-[0.2em] font-bold text-terracotta mb-4">FAQ</p>
+          <h2 className="font-serif text-4xl sm:text-5xl text-charcoal tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-navy/60 text-lg">
-            Everything you need to know about DentaLine AI.
+          <p className="text-charcoal/50 text-lg font-light">
+            Everything you need to know about Physiocare.Ai.
           </p>
         </motion.div>
 
@@ -65,13 +66,13 @@ const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-ivory rounded-xl px-6 border-none"
+                className="bg-sage/50 rounded-2xl px-6 border-none"
                 data-testid={`faq-item-${index}`}
               >
-                <AccordionTrigger className="text-left font-medium text-navy hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-medium text-charcoal hover:no-underline py-5 text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-navy/70 pb-5 leading-relaxed">
+                <AccordionContent className="text-charcoal/60 pb-5 leading-relaxed font-light">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -28,7 +28,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-ivory/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'backdrop-blur-xl bg-cream/75 border-b border-charcoal/10 shadow-sm' : 'bg-transparent'
       }`}
       data-testid="navbar"
     >
@@ -36,12 +36,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2" data-testid="logo">
-            <div className="w-8 h-8 bg-dental-blue rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            <div className="w-10 h-10 bg-gradient-to-br from-teal to-teal-light rounded-xl flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </div>
-            <span className="font-serif text-xl text-navy">DentaLine AI</span>
+            <span className="font-serif text-2xl font-medium text-charcoal">Physiocare<span className="text-terracotta">.Ai</span></span>
           </a>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-navy/80 hover:text-navy font-medium text-sm transition-colors"
+                className="text-charcoal/70 hover:text-charcoal font-medium text-sm transition-colors"
                 data-testid={`nav-link-${link.name.toLowerCase().replace(' ', '-')}`}
               >
                 {link.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <Button
-              className="bg-navy hover:bg-navy/90 text-white rounded-full px-6"
+              className="bg-teal hover:bg-teal-light text-white rounded-full px-6 transition-all duration-300"
               onClick={() => window.open('https://calendly.com', '_blank')}
               data-testid="nav-cta-btn"
             >
@@ -71,7 +71,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-navy"
+            className="md:hidden p-2 text-charcoal"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="mobile-menu-btn"
           >
@@ -85,14 +85,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-ivory/95 backdrop-blur-md py-4 px-2"
+            className="md:hidden bg-cream/95 backdrop-blur-md py-4 px-2 rounded-2xl mb-4"
             data-testid="mobile-menu"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 px-4 text-navy/80 hover:text-navy font-medium"
+                className="block py-3 px-4 text-charcoal/80 hover:text-charcoal font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -100,7 +100,7 @@ const Navbar = () => {
             ))}
             <div className="pt-4 px-4">
               <Button
-                className="w-full bg-navy hover:bg-navy/90 text-white rounded-full"
+                className="w-full bg-teal hover:bg-teal-light text-white rounded-full"
                 onClick={() => window.open('https://calendly.com', '_blank')}
               >
                 Book a Demo

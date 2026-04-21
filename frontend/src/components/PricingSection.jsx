@@ -12,10 +12,10 @@ const PricingSection = () => {
   const plans = [
     {
       name: 'Starter',
-      description: 'Perfect for small practices',
-      monthlyPrice: 199,
+      description: 'Perfect for small clinics',
+      monthlyPrice: 179,
       features: [
-        'Up to 500 calls/month',
+        'Up to 400 calls/month',
         'Basic appointment booking',
         'SMS reminders',
         '1 PMS integration',
@@ -26,10 +26,10 @@ const PricingSection = () => {
     },
     {
       name: 'Growth',
-      description: 'Most popular for growing clinics',
-      monthlyPrice: 399,
+      description: 'Most popular for growing practices',
+      monthlyPrice: 349,
       features: [
-        'Up to 2,000 calls/month',
+        'Up to 1,500 calls/month',
         'Advanced booking & rescheduling',
         'SMS + Email reminders',
         'Unlimited PMS integrations',
@@ -43,7 +43,7 @@ const PricingSection = () => {
     {
       name: 'Enterprise',
       description: 'For multi-location practices',
-      monthlyPrice: 799,
+      monthlyPrice: 699,
       features: [
         'Unlimited calls',
         'All Growth features',
@@ -66,7 +66,7 @@ const PricingSection = () => {
   };
 
   return (
-    <section ref={ref} id="pricing" className="py-20 md:py-32 px-4 bg-white" data-testid="pricing-section">
+    <section ref={ref} id="pricing" className="py-24 md:py-32 px-4 bg-white" data-testid="pricing-section">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -74,16 +74,17 @@ const PricingSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl text-navy mb-4">
+          <p className="text-xs uppercase tracking-[0.2em] font-bold text-terracotta mb-4">Pricing</p>
+          <h2 className="font-serif text-4xl sm:text-5xl text-charcoal tracking-tight mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-navy/60 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-charcoal/50 text-lg max-w-2xl mx-auto mb-8 font-light">
             Choose the plan that fits your practice. All plans include a 14-day free trial.
           </p>
 
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4" data-testid="billing-toggle">
-            <span className={`text-sm ${!isAnnual ? 'text-navy font-medium' : 'text-navy/60'}`}>
+            <span className={`text-sm ${!isAnnual ? 'text-charcoal font-medium' : 'text-charcoal/50'}`}>
               Monthly
             </span>
             <Switch
@@ -91,11 +92,11 @@ const PricingSection = () => {
               onCheckedChange={setIsAnnual}
               data-testid="billing-switch"
             />
-            <span className={`text-sm ${isAnnual ? 'text-navy font-medium' : 'text-navy/60'}`}>
+            <span className={`text-sm ${isAnnual ? 'text-charcoal font-medium' : 'text-charcoal/50'}`}>
               Annual
             </span>
             {isAnnual && (
-              <span className="text-xs bg-dental-blue text-white px-2 py-1 rounded-full">
+              <span className="text-xs bg-terracotta text-white px-3 py-1 rounded-full font-medium">
                 Save 20%
               </span>
             )}
@@ -110,40 +111,40 @@ const PricingSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className={`rounded-2xl p-6 md:p-8 ${
+              className={`rounded-3xl p-8 ${
                 plan.highlighted
-                  ? 'bg-navy text-white scale-105 shadow-xl'
-                  : 'bg-white border border-gray-200'
+                  ? 'bg-teal text-white scale-[1.02] shadow-xl'
+                  : 'bg-white border border-charcoal/10 shadow-[0_4px_24px_rgba(18,28,26,0.04)]'
               }`}
               data-testid={`pricing-card-${plan.name.toLowerCase()}`}
             >
               {plan.highlighted && (
-                <div className="text-dental-blue text-sm font-medium mb-4">
+                <div className="text-terracotta-light text-sm font-medium mb-4">
                   Most Popular
                 </div>
               )}
               
-              <h3 className={`font-serif text-2xl mb-2 ${plan.highlighted ? 'text-white' : 'text-navy'}`}>
+              <h3 className={`font-serif text-2xl mb-2 ${plan.highlighted ? 'text-white' : 'text-charcoal'}`}>
                 {plan.name}
               </h3>
-              <p className={`text-sm mb-6 ${plan.highlighted ? 'text-white/70' : 'text-navy/60'}`}>
+              <p className={`text-sm mb-6 ${plan.highlighted ? 'text-white/70' : 'text-charcoal/50'}`}>
                 {plan.description}
               </p>
 
               <div className="mb-6">
-                <span className={`font-serif text-4xl ${plan.highlighted ? 'text-white' : 'text-navy'}`}>
+                <span className={`font-serif text-5xl ${plan.highlighted ? 'text-white' : 'text-charcoal'}`}>
                   ${getPrice(plan.monthlyPrice)}
                 </span>
-                <span className={`text-sm ${plan.highlighted ? 'text-white/70' : 'text-navy/60'}`}>
+                <span className={`text-sm ${plan.highlighted ? 'text-white/70' : 'text-charcoal/50'}`}>
                   /month
                 </span>
               </div>
 
               <Button
-                className={`w-full rounded-full mb-6 ${
+                className={`w-full rounded-full mb-6 transition-all duration-300 ${
                   plan.highlighted
-                    ? 'bg-dental-blue hover:bg-dental-blue/90 text-white'
-                    : 'bg-navy hover:bg-navy/90 text-white'
+                    ? 'bg-terracotta hover:bg-terracotta-light text-white'
+                    : 'bg-teal hover:bg-teal-light text-white'
                 }`}
                 onClick={() => window.open('https://calendly.com', '_blank')}
                 data-testid={`pricing-cta-${plan.name.toLowerCase()}`}
@@ -155,9 +156,9 @@ const PricingSection = () => {
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className={`w-5 h-5 flex-shrink-0 ${
-                      plan.highlighted ? 'text-dental-blue' : 'text-dental-blue'
+                      plan.highlighted ? 'text-terracotta-light' : 'text-teal'
                     }`} />
-                    <span className={`text-sm ${plan.highlighted ? 'text-white/90' : 'text-navy/70'}`}>
+                    <span className={`text-sm ${plan.highlighted ? 'text-white/90' : 'text-charcoal/60'} font-light`}>
                       {feature}
                     </span>
                   </li>
