@@ -6,11 +6,11 @@ const WaveformAnimation = () => {
   const bars = 28;
   
   return (
-    <div className="flex items-end justify-center gap-1.5 h-40 md:h-56">
+    <div className="flex items-end justify-center gap-1 md:gap-1.5 h-40 md:h-56">
       {[...Array(bars)].map((_, i) => (
         <motion.div
           key={i}
-          className="w-2 md:w-2.5 rounded-full"
+          className="w-1.5 md:w-2.5 rounded-full"
           style={{
             background: i % 4 === 0 ? '#2B6165' : i % 4 === 1 ? '#E07A5F' : i % 4 === 2 ? '#829379' : '#45898F',
           }}
@@ -109,9 +109,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_24px_rgba(18,28,26,0.06)] border border-charcoal/5">
+            <div className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-[0_4px_24px_rgba(18,28,26,0.06)] border border-charcoal/5">
               {/* Phone mockup header */}
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-6 md:mb-8">
                 <div className="w-3 h-3 rounded-full bg-terracotta animate-pulse" />
                 <span className="text-sm text-charcoal/50 font-medium">Physiocare.Ai is listening...</span>
               </div>

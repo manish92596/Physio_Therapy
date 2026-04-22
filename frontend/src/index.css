@@ -11,6 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #F7F8F6;
   color: #121C1A;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 code {
@@ -52,9 +58,6 @@ code {
 }
 
 /* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
