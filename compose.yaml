@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: physio-therapy-frontend:latest
+    ports:
+      - "4001:8080"
+    restart: unless-stopped
