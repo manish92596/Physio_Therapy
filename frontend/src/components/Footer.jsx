@@ -50,15 +50,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-cream/50 text-sm">
                 <Phone className="w-4 h-4" />
-                <span>1-800-PHYSIO-AI</span>
+                <span>+1 (416) 666-1715</span>
               </div>
               <div className="flex items-center gap-3 text-cream/50 text-sm">
                 <Mail className="w-4 h-4" />
-                <span>hello@physiocare.ai</span>
+                <span>info@techladder.ai</span>
               </div>
-              <div className="flex items-center gap-3 text-cream/50 text-sm">
-                <MapPin className="w-4 h-4" />
-                <span>Austin, TX</span>
+              <div className="flex items-start gap-3 text-cream/50 text-sm">
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span>7345 W Sand Lake Road, Orlando, Florida 32819, US</span>
               </div>
             </div>
           </div>
