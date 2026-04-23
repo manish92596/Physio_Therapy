@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import { Check } from 'lucide-react';
 import { Button } from './ui/button';
 import { Switch } from './ui/switch';
+import { CALENDLY_BOOK_DEMO_URL } from '@/lib/links';
 
 const PricingSection = () => {
   const ref = useRef(null);
@@ -141,15 +142,21 @@ const PricingSection = () => {
               </div>
 
               <Button
+                asChild
                 className={`w-full rounded-full mb-6 transition-all duration-300 ${
                   plan.highlighted
                     ? 'bg-terracotta hover:bg-terracotta-light text-white'
                     : 'bg-teal hover:bg-teal-light text-white'
                 }`}
-                onClick={() => window.open('https://calendly.com', '_blank')}
-                data-testid={`pricing-cta-${plan.name.toLowerCase()}`}
               >
-                Start Free Trial
+                <a
+                  href={CALENDLY_BOOK_DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`pricing-cta-${plan.name.toLowerCase()}`}
+                >
+                  Start Free Trial
+                </a>
               </Button>
 
               <ul className="space-y-3">

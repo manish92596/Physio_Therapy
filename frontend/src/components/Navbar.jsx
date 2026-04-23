@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { CALENDLY_BOOK_DEMO_URL } from '@/lib/links';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,12 +61,15 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button
-              className="bg-teal hover:bg-teal-light text-white rounded-full px-6 transition-all duration-300"
-              onClick={() => window.open('https://calendly.com', '_blank')}
-              data-testid="nav-cta-btn"
-            >
-              Book a Demo
+            <Button asChild className="bg-teal hover:bg-teal-light text-white rounded-full px-6 transition-all duration-300">
+              <a
+                href={CALENDLY_BOOK_DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="nav-cta-btn"
+              >
+                Book a Demo
+              </a>
             </Button>
           </div>
 
@@ -99,11 +103,15 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pt-4 px-4">
-              <Button
-                className="w-full bg-teal hover:bg-teal-light text-white rounded-full"
-                onClick={() => window.open('https://calendly.com', '_blank')}
-              >
-                Book a Demo
+              <Button asChild className="w-full bg-teal hover:bg-teal-light text-white rounded-full">
+                <a
+                  href={CALENDLY_BOOK_DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Book a Demo
+                </a>
               </Button>
             </div>
           </motion.div>

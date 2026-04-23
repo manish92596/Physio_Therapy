@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { Shield, CheckCircle, Clock, Zap, ArrowDown } from 'lucide-react';
+import { CALENDLY_BOOK_DEMO_URL } from '@/lib/links';
 
 const WaveformAnimation = () => {
   const bars = 28;
@@ -65,13 +66,15 @@ const HeroSection = () => {
             
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button
-                size="lg"
-                className="bg-teal hover:bg-teal-light text-white rounded-full px-8 py-6 text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                onClick={() => window.open('https://calendly.com', '_blank')}
-                data-testid="hero-cta-demo"
-              >
-                Book a Free Demo
+              <Button asChild size="lg" className="bg-teal hover:bg-teal-light text-white rounded-full px-8 py-6 text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <a
+                  href={CALENDLY_BOOK_DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="hero-cta-demo"
+                >
+                  Book a Free Demo
+                </a>
               </Button>
               <Button
                 size="lg"

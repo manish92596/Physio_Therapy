@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import { CALENDLY_BOOK_DEMO_URL } from '@/lib/links';
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -28,14 +29,16 @@ const CTASection = () => {
               Join 1,800+ physical therapy clinics trusting Physiocare.Ai to handle their patient communications.
             </p>
             
-            <Button
-              size="lg"
-              className="bg-terracotta hover:bg-terracotta-light text-white rounded-full px-8 py-6 text-lg group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              onClick={() => window.open('https://calendly.com', '_blank')}
-              data-testid="cta-demo-btn"
-            >
-              Book Your Free Demo
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button asChild size="lg" className="bg-terracotta hover:bg-terracotta-light text-white rounded-full px-8 py-6 text-lg group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <a
+                href={CALENDLY_BOOK_DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="cta-demo-btn"
+              >
+                Book Your Free Demo
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
 
             <p className="text-white/40 text-sm mt-6 font-light">
