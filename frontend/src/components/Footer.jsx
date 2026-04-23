@@ -8,17 +8,9 @@ const Footer = () => {
       { name: 'Integrations', href: '#integrations' },
       { name: 'FAQ', href: '#faq' },
     ],
-    Company: [
-      { name: 'About Us', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Contact', href: '#' },
-    ],
     Legal: [
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
       { name: 'Terms of Service', href: '#' },
-      { name: 'HIPAA Notice', href: '#' },
-      { name: 'BAA Request', href: '#' },
     ],
   };
 
@@ -31,7 +23,7 @@ const Footer = () => {
   return (
     <footer className="bg-charcoal text-cream py-20 px-4" data-testid="footer">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
